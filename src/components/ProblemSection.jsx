@@ -98,6 +98,28 @@ export default function ProblemSection() {
   const mobileScrollRef = useRef(null)
   const mobileCardRefs = useRef([])
   const scrollFrameRef = useRef(null)
+  const dragRef = useRef({ startX: 0, isDragging: false })
+
+  const onDragStart = (e) => {
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    dragRef.current = { startX: clientX, isDragging: false }
+  }
+
+  const onDragMove = (e) => {
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX
+    if (Math.abs(clientX - dragRef.current.startX) > 10) {
+      dragRef.current.isDragging = true
+    }
+  }
+
+  const onDragEnd = (e) => {
+    const clientX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX
+    const delta = clientX - dragRef.current.startX
+    if (dragRef.current.isDragging && Math.abs(delta) > 50) {
+      delta > 0 ? handlePrev() : handleNext()
+    }
+    dragRef.current.isDragging = false
+  }
 
   const scrollToMobileCard = (index, behavior = 'smooth') => {
     const container = mobileScrollRef.current
@@ -247,7 +269,16 @@ export default function ProblemSection() {
         </div>
 
         {/* Desktop carousel */}
-        <div className="relative hidden h-[700px] w-full max-w-5xl mx-auto items-center justify-center md:flex">
+        <div
+          className="relative hidden h-[700px] w-full max-w-5xl mx-auto items-center justify-center md:flex cursor-grab active:cursor-grabbing select-none"
+          onMouseDown={onDragStart}
+          onMouseMove={onDragMove}
+          onMouseUp={onDragEnd}
+          onMouseLeave={onDragEnd}
+          onTouchStart={onDragStart}
+          onTouchMove={onDragMove}
+          onTouchEnd={onDragEnd}
+        >
           <div className="relative w-full h-full flex items-center justify-center">
             {videoPlaceholders.map((video, index) => {
               const position = getVisualPosition(index)
@@ -269,6 +300,7 @@ export default function ProblemSection() {
                   }}
                   transition={{ type: "spring", stiffness: 200, damping: 25 }}
                   onClick={() => {
+                    if (dragRef.current.isDragging) return
                     if (!isCenter) {
                       goToVideo(index)
                     } else {

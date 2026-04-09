@@ -37,11 +37,20 @@ export default function Offer() {
             ref={ref}
             className={`transition-all duration-1000 transform max-w-5xl mx-auto ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-              
-              {/* Left: Image & Included items */}
-              <div className="flex flex-col items-center md:items-start text-left">
-                <img src="/mockup_ebook.png" alt="Mockup Guia dos Peptídeos" className="w-full max-w-[320px] h-auto object-contain mb-10 drop-shadow-xl hover:translate-y-[-5px] transition-transform duration-500" />
+            {/* Top: mockup left, included items right */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-14">
+
+              {/* Left: mockup only */}
+              <div className="flex justify-center md:justify-start">
+                <img
+                  src="/mockup_ebook.png"
+                  alt="Mockup Guia dos Peptídeos"
+                  className="w-full max-w-[320px] h-auto object-contain drop-shadow-xl hover:translate-y-[-5px] transition-transform duration-500"
+                />
+              </div>
+
+              {/* Right: included items */}
+              <div>
                 <h3 className="font-heading font-extrabold text-2xl mb-6 tracking-tight text-dark">
                   Tudo o que você recebe hoje:
                 </h3>
@@ -60,39 +69,35 @@ export default function Offer() {
                   ))}
                 </ul>
               </div>
-
-              {/* Right: Price + CTA */}
-              <div className="flex flex-col justify-center w-full md:pl-10">
-                <div className="mb-8 text-center md:text-left">
-                  <p className="font-heading text-dark/40 font-bold text-lg line-through decoration-dark/20 mb-2">De R$ 97</p>
-                  <div className="flex items-baseline justify-center md:justify-start gap-2 text-dark mb-2">
-                    <span className="font-heading font-bold text-xl md:text-2xl">Por</span>
-                    <span className="font-heading font-black text-6xl md:text-7xl tracking-tighter">R$ 47,90</span>
-                  </div>
-                  <p className="font-heading font-bold text-dark/60 text-lg">pagamento único</p>
-                  <p className="font-body text-dark/40 text-sm font-medium mt-1">Acesso vitalício ao material completo</p>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href="https://arkan-club.mycartpanda.com/checkout/209090710:1"
-                  className="btn-gold block text-center w-full text-lg py-5 mb-6 font-bold shadow-xl shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-1 transition-all duration-300 relative z-10"
-                >
-                  Quero o Pacote Completo
-                </a>
-
-                {/* Payment methods */}
-                <div className="flex items-center justify-center md:justify-start gap-6 mt-2 opacity-60 mix-blend-multiply">
-                  <svg viewBox="0 0 32 32" className="h-5 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path d="M22.022 17.514L28.1 4.5h-4.398l-4.706 10.038l-4.71-10.038H9.897L15.98 17.51l-6.852 14.65H13.52l5.474-11.722l5.483 11.722h4.412" fill="#5E5E5E"/><path d="M5.578 4.496H1.14l8.36 17.702l-1.614 3.426l4.38.004l12.87-21.13h-4.4L13.197 18.06" fill="#000"/></g></svg>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png" alt="Mastercard" className="h-5 grayscale object-contain" />
-                  <svg viewBox="0 0 38 12" className="h-4 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M13.623 0L9.049 11.23H4.49L7.433 0h6.19zM36.173.018l-3.328 11.212H28.19L31.517.018h4.656zm-12.75 3.125c-.015-1.092.986-1.745 2.158-2.091 1.171-.345 3.329-.396 4.675.31l.937-2.673c-1.345-.558-4.045-.843-6.195-.843-2.053 0-4.053.69-5.183 1.956-1.129 1.266-1.196 2.753-.541 3.514.801.932 2.652 1.572 2.652 1.572.766.425 2.89.846 2.89 1.846 0 1-.95 1.583-2.315 1.583-1.65-.015-3.645-.66-4.995-1.28l-1 2.82c1.35.615 3.24 1.155 5.535 1.17 2.055.015 4.095-.69 5.25-1.995 1.155-1.305 1.305-2.73 0-3.87-.645-.555-2.19-1.29-3.255-1.605 0 0-2.325-.57-2.31-1.665h-.015zM4.14 0H.465C-.105 0-.15.42.15.825l7.98 10.405H13.6L9.855 1.05C9.72.39 9.18 0 8.52 0H4.14z"/></svg>
-                </div>
-              </div>
             </div>
-            
-            <p className="text-center font-body text-dark/50 text-sm font-medium mt-8">
-              🔒 Ambiente de pagamento 100% seguro. Acesso enviado automaticamente por e-mail.
-            </p>
+
+            {/* Bottom: price + CTA */}
+            <div className="border-t border-dark/5 pt-12 flex flex-col items-center text-center">
+              <p className="font-heading text-dark/40 font-bold text-lg line-through decoration-dark/20 mb-2">De R$ 97</p>
+              <div className="flex items-baseline justify-center gap-2 text-dark mb-2">
+                <span className="font-heading font-bold text-xl md:text-2xl">Por</span>
+                <span className="font-heading font-black text-6xl md:text-7xl tracking-tighter">R$ 47,90</span>
+              </div>
+              <p className="font-heading font-bold text-dark/60 text-lg mb-1">pagamento único</p>
+              <p className="font-body text-dark/40 text-sm font-medium mb-8">Acesso vitalício ao material completo</p>
+
+              <a
+                href="https://arkan-club.mycartpanda.com/checkout/209090710:1"
+                className="btn-gold block text-center w-full max-w-md text-lg py-5 mb-6 font-bold shadow-xl shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-1 transition-all duration-300 relative z-10"
+              >
+                Quero o Pacote Completo
+              </a>
+
+              <div className="flex items-center justify-center gap-6 opacity-60 mix-blend-multiply mb-6">
+                <svg viewBox="0 0 32 32" className="h-5 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path d="M22.022 17.514L28.1 4.5h-4.398l-4.706 10.038l-4.71-10.038H9.897L15.98 17.51l-6.852 14.65H13.52l5.474-11.722l5.483 11.722h4.412" fill="#5E5E5E"/><path d="M5.578 4.496H1.14l8.36 17.702l-1.614 3.426l4.38.004l12.87-21.13h-4.4L13.197 18.06" fill="#000"/></g></svg>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png" alt="Mastercard" className="h-5 grayscale object-contain" />
+                <svg viewBox="0 0 38 12" className="h-4 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M13.623 0L9.049 11.23H4.49L7.433 0h6.19zM36.173.018l-3.328 11.212H28.19L31.517.018h4.656zm-12.75 3.125c-.015-1.092.986-1.745 2.158-2.091 1.171-.345 3.329-.396 4.675.31l.937-2.673c-1.345-.558-4.045-.843-6.195-.843-2.053 0-4.053.69-5.183 1.956-1.129 1.266-1.196 2.753-.541 3.514.801.932 2.652 1.572 2.652 1.572.766.425 2.89.846 2.89 1.846 0 1-.95 1.583-2.315 1.583-1.65-.015-3.645-.66-4.995-1.28l-1 2.82c1.35.615 3.24 1.155 5.535 1.17 2.055.015 4.095-.69 5.25-1.995 1.155-1.305 1.305-2.73 0-3.87-.645-.555-2.19-1.29-3.255-1.605 0 0-2.325-.57-2.31-1.665h-.015zM4.14 0H.465C-.105 0-.15.42.15.825l7.98 10.405H13.6L9.855 1.05C9.72.39 9.18 0 8.52 0H4.14z"/></svg>
+              </div>
+
+              <p className="font-body text-dark/50 text-sm font-medium">
+                🔒 Ambiente de pagamento 100% seguro. Acesso enviado automaticamente por e-mail.
+              </p>
+            </div>
           </div>
         </div>
       </div>

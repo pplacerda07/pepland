@@ -57,27 +57,6 @@ export default function SolutionSection() {
               </p>
             </div>
 
-            <div className="mt-10 flex flex-col gap-4">
-              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md border border-dark/5 p-4 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-xl shrink-0">
-                  🎯
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-dark text-lg">Direto ao Ponto</h4>
-                  <p className="font-body text-sm font-medium text-dark/60 mt-0.5">Sem jargões confusos e sem falsas promessas.</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md border border-dark/5 p-4 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center text-xl shrink-0">
-                  ⚡
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-dark text-lg">Teórico e Prático</h4>
-                  <p className="font-body text-sm font-medium text-dark/60 mt-0.5">Aprenda a função biológica e compre no mesmo dia.</p>
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Abstract Glass Molecule Representation */}
