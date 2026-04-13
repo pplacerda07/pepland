@@ -69,7 +69,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <motion.p variants={itemVars} className="font-body text-lg md:text-xl text-dark/60 leading-relaxed mb-10 max-w-2xl font-medium">
-            Descubra como peptídeos científicos funcionam como sinais naturais do corpo, com atuação específica, impacto sistêmico menor e uma lógica completamente diferente dos anabolizantes.
+            Queime gordura, aumente GH e ganhe massa magra. Sem destruir seu eixo hormonal e sem os colaterais dos anabolizantes.
           </motion.p>
 
           {/* Metric Badges acting as modern bullet points */}

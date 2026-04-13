@@ -22,12 +22,12 @@ const peptides = [
     id: 'queima-de-gordura',
     name: 'Queima de Gordura',
     highlight: false,
-    summary: 'Ao otimizar sinais metabólicos e hormonais, certas rotas peptídicas auxiliam na lipólise — o processo natural de quebra e utilização de gordura como fonte de energia.',
+    summary: 'Peptídeos que aceleram a queima de gordura localizada e visceral. Sem destruir massa magra, sem rebote e sem suprimir seu metabolismo.',
     benefits: [
-      'Auxílio direto à lipólise',
-      'Otimização do metabolismo basal',
-      'Controle de apetite e saciedade',
-      'Resultados progressivos e rastreáveis',
+      'Queima gordura visceral e localizada',
+      'Reduz apetite sem efeito rebote',
+      'Acelera metabolismo sem estimulante',
+      'Seca sem perder músculo',
     ],
     color: 'from-[#97A79D]/20 to-[#97A79D]/5',
     tabColor: 'bg-[#97A79D]',
@@ -37,12 +37,12 @@ const peptides = [
     id: 'aumento-de-gh',
     name: 'Aumento de GH',
     highlight: false,
-    summary: 'Diferente de injetar hormônio sintético pronto, certas estratégias estimulam o próprio corpo a produzir GH em pulsos mais próximos da fisiologia normal, respeitando o ritmo biológico.',
+    summary: 'Eleva GH a nível suprafisiológico sem suprimir o eixo hormonal. Sem efeitos colaterais agressivos e sem sobrecarga no fígado.',
     benefits: [
-      'Estímulo natural da produção de GH',
-      'Respeito ao ritmo circadiano',
-      'Menos lógica de força hormonal',
-      'Otimização gradual e segura',
+      'GH suprafisiológico sem suprimir o eixo',
+      'Recuperação muscular 2x mais rápida',
+      'Sono profundo desde a primeira semana',
+      'Sem efeito rebote, sem colateral hormonal',
     ],
     color: 'from-dark/10 to-dark/5',
     tabColor: 'bg-dark',
@@ -52,12 +52,12 @@ const peptides = [
     id: 'massa-magra',
     name: 'Massa Magra',
     highlight: false,
-    summary: 'A recomposição corporal envolve entender apetite, gordura, massa magra, sono e recuperação como um sistema. O foco é construção inteligente, não crescimento muscular exagerado.',
+    summary: 'Peptídeos que aumentam massa magra, reduzem gordura e melhoram o sono ao mesmo tempo. Ganho muscular acima do normal sem destruir seu eixo hormonal.',
     benefits: [
-      'Manutenção e ganho de massa magra',
-      'Melhora da composição corporal',
-      'Sono como peça metabólica',
-      'Sem estética de anabolizante',
+      'Ganho muscular real sem anabolizante',
+      'Perda de gordura simultânea ao ganho',
+      'Melhora visível na definição muscular',
+      'Sem colateral hormonal, sem efeito rebote',
     ],
     color: 'from-[#97A79D]/15 to-[#97A79D]/5',
     tabColor: 'bg-[#97A79D]',
@@ -67,12 +67,12 @@ const peptides = [
     id: 'melhora-da-pele',
     name: 'Melhora da Pele',
     highlight: false,
-    summary: 'Muitos usuários relatam ganhos significativos na elasticidade da pele, qualidade do sono profundo e recuperação articular — benefícios que vão além da estética muscular.',
+    summary: 'Peptídeos que removem rugas, aumentam produção de colágeno e revertem sinais de envelhecimento. Resultados visíveis no espelho em poucas semanas.',
     benefits: [
-      'Elasticidade e firmeza da pele',
-      'Qualidade do sono profundo',
-      'Recuperação articular',
-      'Benefícios antienvelhecimento',
+      'Remove rugas e linhas de expressão',
+      'Aumenta produção de colágeno',
+      'Elimina acne e manchas',
+      'Firmeza e elasticidade visíveis',
     ],
     color: 'from-[#B08A43]/15 to-[#B08A43]/5',
     tabColor: 'bg-[#B08A43]',
@@ -100,7 +100,7 @@ export default function PeptidesShowcase() {
             O Arsenal Científico
           </span>
           <h2 id="peptides-title" className="font-heading text-4xl md:text-5xl lg:text-5xl font-extrabold text-dark tracking-tight leading-[1.1] mb-6">
-            As Ferramentas de <br className="hidden md:block" /> <span className="text-gold italic">Recomposição Corporal</span>
+            O Que Cada Peptídeo <br className="hidden md:block" /> <span className="text-gold italic">Faz Por Você</span>
           </h2>
         </motion.div>
 

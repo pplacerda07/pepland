@@ -1,10 +1,10 @@
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const included = [
-  { text: 'Acesso completo ao Volume 1: O Guia Definitivo dos Peptídeos', highlight: true },
-  { text: 'Volume 2: Guia de Doses e Reconstituição com tabelas, cálculos e passo a passo completo', highlight: true },
-  { text: 'Volume 3: Lista Exclusiva de Fornecedores Verificados no cenário nacional e internacional', highlight: true },
-  { text: 'Acesso imediato em PDF para ler no celular, tablet ou computador', highlight: true },
+  { text: 'Volume 1: O que cada peptídeo faz, como funciona e por que é diferente de esteroide', highlight: true },
+  { text: 'Volume 2: Doses exatas, reconstituição passo a passo e tabelas prontas por objetivo', highlight: true },
+  { text: 'Volume 3: Lista verificada de fornecedores nacionais e internacionais', highlight: true },
+  { text: 'Acesso imediato em PDF. Leia no celular, tablet ou computador', highlight: true },
 ]
 
 export default function Offer() {
@@ -24,10 +24,10 @@ export default function Offer() {
             Acesso Liberado Hoje
           </span>
           <h2 id="offer-title" className="font-heading text-4xl md:text-5xl font-extrabold text-dark tracking-tight leading-[1.1] mb-6 max-w-3xl mx-auto">
-            Não desperdice meses procurando o que já está <span className="text-gold italic">validado</span>.
+            Pare de Perder Tempo com Informação <span className="text-gold italic">Errada</span>.
           </h2>
           <p className="font-body text-xl text-dark/60 max-w-2xl mx-auto font-medium">
-            Você está a 2 minutos de acessar o exato mapa molecular usado por quem domina a própria composição corporal.
+            Doses, fornecedores e protocolos: tudo validado, em português, num material só. Em 2 minutos no seu e-mail.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function Offer() {
               {/* Right: included items */}
               <div>
                 <h3 className="font-heading font-extrabold text-2xl mb-6 tracking-tight text-dark">
-                  Tudo o que você recebe hoje:
+                  O que você recebe hoje:
                 </h3>
                 <ul className="space-y-4 w-full" aria-label="Itens inclusos no pacote">
                   {included.map((item, i) => (
@@ -84,7 +84,7 @@ export default function Offer() {
                 href="https://arkan-club.mycartpanda.com/checkout/209090710:1"
                 className="btn-gold block text-center w-full max-w-md text-lg py-5 mb-6 font-bold shadow-xl shadow-gold/20 hover:shadow-gold/40 hover:-translate-y-1 transition-all duration-300 relative z-10"
               >
-                Quero o Pacote Completo
+                Quero Meu Guia Agora
               </a>
 
               {/* Ícones de pagamento reais */}

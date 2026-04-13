@@ -4,36 +4,36 @@ import { cn } from '../lib/utils'
 
 const faqs = [
   {
-    category: 'Segurança & Recomposição',
+    category: 'Sobre Peptídeos',
     questions: [
       {
-        q: 'Esses peptídeos são esteroides locais?',
-        a: 'Absolutamente não. Esteroides e hormônios são estruturas químicas completamente diferentes. Peptídeos não suprimem seu eixo de testosterona e não causam os colaterais comuns de esteroides. Eles agem na origem celular da inflamação e renovação.'
+        q: 'Peptídeos são esteroides?',
+        a: 'Não. São estruturas químicas completamente diferentes. Esteroides suprimem a produção hormonal natural e causam colaterais sérios. Peptídeos não desligam seu eixo hormonal, não causam efeitos colaterais agressivos e não exigem intervenção após o uso.'
       },
       {
-        q: 'Em quanto tempo começo a notar redução de tecido adiposo?',
-        a: 'Cada biologia é única. Algumas rotas peptídicas atuam em apetite, sinalização metabólica e controle glicêmico. O resultado visível depende de protocolo, contexto, dieta, treino, sono e acompanhamento adequado.'
+        q: 'Em quanto tempo vou notar resultado?',
+        a: 'Depende do peptídeo e do objetivo. Melhora no sono pode aparecer na primeira semana. Perda de gordura e ganho de massa geralmente ficam visíveis entre 4 a 8 semanas com protocolo adequado, dieta e treino alinhados.'
       },
       {
-        q: 'Mulheres podem estudar peptídeos sem medo de engrossar a voz?',
-        a: 'Sim. Peptídeos não são compostos androgênicos como os anabolizantes. A proposta é sinalização biológica específica, não excesso de hormônios masculinos. Mesmo assim, qualquer uso exige critério e orientação profissional.'
+        q: 'Mulheres podem usar peptídeos?',
+        a: 'Sim. Peptídeos não são compostos androgênicos. Não engrossam a voz, não causam pelos faciais e não provocam virilização. Homens e mulheres usam os mesmos peptídeos, com doses ajustadas. Mesmo assim, qualquer uso exige orientação profissional.'
       }
     ]
   },
   {
-    category: 'Logística & Dúvidas Reais',
+    category: 'Sobre o Material',
     questions: [
       {
-        q: 'Onde encontro os fornecedores no Brasil?',
-        a: 'O material contém a lista mais fidedigna e atualizada. Incluímos desde distribuidores locais até importadores diretos. Focamos nos laboratórios que entregam produto com laudo registrado de teste independente.'
+        q: 'A lista de fornecedores é atualizada?',
+        a: 'Sim. O material traz a lista mais completa e verificada do mercado brasileiro. Incluímos laboratórios nacionais e internacionais com critérios claros de validação, para você comprar com segurança, sem cair em produto falsificado.'
       },
       {
-        q: 'Preciso misturar tudo ou posso usar só um peptídeo?',
-        a: 'Você define a rota. Algumas pessoas estudam caminhos voltados à pele, outras à recuperação articular, sono, apetite ou composição corporal. O método mostra como pensar em combinações sem tratar tudo como se fosse anabolizante.'
+        q: 'Preciso usar todos os peptídeos ou posso escolher um?',
+        a: 'Você escolhe. O guia mostra como cada peptídeo funciona, para qual objetivo ele serve (queima de gordura, ganho de massa, pele, sono) e como montar seu próprio protocolo. Não precisa usar tudo.'
       },
       {
-        q: 'Sou totalmente inexperiente em usar seringas. Posso fazer?',
-        a: 'O guia detalha o processo visual. A água bacteriostática junto aos micro-passos garantem aplicações fáceis. A lógica ensina as canetas subcutâneas as mesmas que diabéticos usam.'
+        q: 'Nunca usei seringa na vida. Consigo aplicar?',
+        a: 'Sim. O Volume 2 mostra o passo a passo visual completo, da reconstituição até a aplicação. A maioria dos peptídeos usa caneta subcutânea, a mesma que diabéticos usam no dia a dia. É simples e indolor.'
       }
     ]
   }
@@ -87,13 +87,13 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block bg-white text-dark/60 font-body font-bold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 shadow-sm border border-dark/5">
-            Mapeamento de Dúvidas
+            Perguntas Frequentes
           </span>
           <h2 id="faq-title" className="font-heading text-4xl md:text-5xl font-extrabold text-dark tracking-tight leading-[1.1] mb-6">
-            A Verdade Sem Filtros.
+            Tudo o Que Você Precisa Saber.
           </h2>
           <p className="font-body text-xl text-dark/50 max-w-2xl mx-auto font-medium">
-            Respostas clínicas e diretas às objeções mais recorrentes de quem deseja acessar a matriz da transformação humana.
+            As dúvidas mais comuns de quem está considerando peptídeos, respondidas de forma direta.
           </p>
         </div>
 

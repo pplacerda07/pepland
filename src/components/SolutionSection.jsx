@@ -45,15 +45,15 @@ export default function SolutionSection() {
               A Solução Real
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-dark tracking-tight leading-[1.1] mb-8">
-              Mensageiros Moleculares de <br /><span className="text-gold italic">Alta Precisão</span>.
+              O Que Peptídeos Fazem Que <br /><span className="text-gold italic">Nenhum Suplemento Faz</span>.
             </h2>
 
             <div className="space-y-6">
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
-                Diferente de suplementos genéricos, os peptídeos atuam como <strong className="text-dark">sinais vitais</strong>. Eles dizem literalmente ao seu corpo para <strong className="text-dark">queimar gordura</strong>, <strong className="text-dark">aumentar GH</strong> e <strong className="text-dark">construir massa magra</strong>.
+                Suplementos comuns não dizem ao corpo o que fazer. Peptídeos sim. Eles ativam diretamente os processos de <strong className="text-dark">queima de gordura</strong>, <strong className="text-dark">produção de GH</strong> e <strong className="text-dark">ganho de massa magra</strong>. Sem precisar forçar hormônio de fora.
               </p>
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
-                Enquanto esteroides forçam doses massivas de hormônios sintéticos e suprimem a produção natural de testosterona, os peptídeos trabalham <strong className="text-dark">com</strong> o seu corpo — sem desligar o eixo hormonal, sem sobrecarga nos órgãos e sem os colaterais agressivos dos anabolizantes. O resultado é ciência aplicada na prática.
+                Esteroides suprimem seu eixo hormonal, sobrecarregam fígado e rins e causam colaterais sérios. Peptídeos entregam resultados potentes: <strong className="text-dark">sem destruir sua produção hormonal natural, sem sobrecarga nos órgãos e sem efeitos colaterais agressivos</strong>. O resultado no espelho, sem o preço no corpo.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function SolutionSection() {
               <div className="absolute bottom-6 left-6 right-6 z-20">
                 <div className="bg-white/95 backdrop-blur-md border border-dark/10 rounded-2xl p-5 shadow-dark-card/5 transform transition-transform group-hover:-translate-y-2">
                   <p className="font-heading text-gold text-base font-bold mb-1">Peptídeos</p>
-                  <p className="font-body text-dark/70 text-sm font-semibold leading-relaxed">Mensagens de código puro processadas de forma imediata pelo seu organismo.</p>
+                  <p className="font-body text-dark/70 text-sm font-semibold leading-relaxed">Resultado máximo, sem os colaterais dos anabolizantes.</p>
                 </div>
               </div>
             </div>

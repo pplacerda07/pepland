@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '5+', label: 'Peptídeos Analisados' },
-  { value: '100%', label: 'Embargo Científico' },
-  { value: '3', label: 'Volumes Focados' },
-  { value: '24/7', label: 'Acesso Vitálicio' },
+  { value: '5+', label: 'Peptídeos Detalhados' },
+  { value: '100%', label: 'Base Científica' },
+  { value: '3', label: 'Volumes Completos' },
+  { value: '24/7', label: 'Acesso Vitalício' },
 ]
 
 const containerVariants = {

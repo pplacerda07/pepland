@@ -8,7 +8,7 @@ const testimonials = [
     stars: 5,
     result: '−9kg em 3 meses',
     resultColor: 'bg-gold/10 text-gold-dark',
-    text: 'Comprei com um pé atrás. Chegou no email na hora, li em dois dias. A parte dos protocolos práticos é ouro — explica exatamente o que buscar e onde comprar sem cair em furada.',
+    text: 'Comprei com um pé atrás. Chegou no email na hora, li em dois dias. A parte dos protocolos práticos é ouro. Explica exatamente o que buscar e onde comprar sem cair em furada.',
     highlight: 'Finalmente um conteúdo sem enrolação',
     colSpan: 'md:col-span-2'
   },
@@ -18,7 +18,7 @@ const testimonials = [
     stars: 5,
     result: '+4kg massa magra',
     resultColor: 'bg-sage/10 text-sage-dark',
-    text: 'Sou nutricionista e fui bem crítico antes de comprar. A profundidade técnica me surpreendeu — especialmente a lista de laboratórios. Já indico pra alguns pacientes que buscam ganho de massa magra com segurança.',
+    text: 'Sou nutricionista e fui bem crítico antes de comprar. A profundidade técnica me surpreendeu, especialmente a lista de laboratórios. Já indico pra alguns pacientes que buscam ganho de massa magra com segurança.',
     highlight: 'Fui criticar e acabei indicando',
     colSpan: 'md:col-span-1'
   },
@@ -38,7 +38,7 @@ const testimonials = [
     stars: 5,
     result: 'Melhor composição corporal',
     resultColor: 'bg-sage/10 text-sage-dark',
-    text: 'Fiquei meses na dúvida achando que era mais do mesmo. Comprei, li, apliquei. Três meses depois minha composição corporal mudou completamente — menos gordura, mais massa e disposição no dia a dia.',
+    text: 'Fiquei meses na dúvida achando que era mais do mesmo. Comprei, li, apliquei. Três meses depois minha composição corporal mudou completamente. Menos gordura, mais massa e disposição no dia a dia.',
     highlight: 'Devia ter comprado antes',
     colSpan: 'md:col-span-2'
   },

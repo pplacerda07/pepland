@@ -21,16 +21,14 @@ export default function FinalCTA() {
           <span className="section-label">Sua vez</span>
 
           <h2 id="final-cta-title" className="section-title mb-6">
-            A Informação que Vai{' '}
-            <span className="text-gold font-bold italic">Mudar</span>{' '}
-            a Sua Jornada
+            Queime Gordura, Ganhe Músculo{' '}
             <br />
-            de Emagrecimento
+            e Faça do{' '}
+            <span className="text-gold font-bold italic">Jeito Certo</span>
           </h2>
 
           <p className="font-body text-dark/65 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-            Você passou meses ou anos procurando uma resposta real. O Guia Definitivo dos Peptídeos é a
-            informação que você precisava, organizada, verificada, em português, e pronta para ser aplicada.
+            Tudo o que você precisa para usar peptídeos com segurança: doses, fornecedores e protocolos, em um só lugar, em português, pronto para aplicar hoje.
           </p>
 
           {/* Value summary */}
@@ -56,7 +54,7 @@ export default function FinalCTA() {
             href="https://arkan-club.mycartpanda.com/checkout/209090710:1"
             className="btn-gold text-xl px-12 py-6 mb-4 block w-fit mx-auto cursor-pointer"
           >
-            Transformar Meu Corpo Agora
+            Quero Meu Guia Agora
           </a>
 
           <p className="font-body text-dark/35 text-sm font-medium">

@@ -5,13 +5,13 @@ const volumes = [
   {
     number: '01',
     title: 'O Guia Definitivo',
-    subtitle: 'Navegação pela Base Biológica',
+    subtitle: 'Entenda Peptídeos de Verdade',
 
     topics: [
-      'O que são peptídeos e como funcionam',
-      'Por que são diferentes de esteroides',
-      'Principais benefícios estudados',
-      'Cuidados essenciais antes de começar',
+      'O que cada peptídeo faz no corpo, sem rodeio',
+      'A diferença real entre peptídeo e esteroide',
+      'Como escolher o peptídeo certo pro seu objetivo',
+      'O que observar antes de começar qualquer protocolo',
     ],
     bgColor: 'bg-[#F8F9FA]',
     borderColor: 'border-dark/5',
@@ -20,13 +20,13 @@ const volumes = [
   {
     number: '02',
     title: 'Doses & Reconstituição',
-    subtitle: 'Preparo Laboratorial em Casa',
+    subtitle: 'Aplique com Segurança Total',
 
     topics: [
-      'Da água bacteriostática à seringa',
-      'Doses base e doses usuais por objetivo',
-      'Formas de uso mais comuns na prática',
-      'Organização prática das informações',
+      'Dose exata por peptídeo e por objetivo',
+      'Passo a passo visual da reconstituição',
+      'Como aplicar com caneta subcutânea (igual diabético)',
+      'Tabelas prontas de dose por peso corporal',
     ],
     bgColor: 'bg-cream',
     borderColor: 'border-[#B08A43]/10',
@@ -35,13 +35,13 @@ const volumes = [
   {
     number: '03',
     title: 'Lista de Fornecedores',
-    subtitle: 'A Bússola do Mercado',
+    subtitle: 'Compre Sem Cair em Furada',
 
     topics: [
       'Laboratórios de confiança no Brasil e exterior',
-      'Critérios de escolha e validação de fornecedores',
-      'Referências de preços e melhores condições',
-      'Importação tática e segura',
+      'Como validar se o fornecedor é legítimo',
+      'Referência de preços para não pagar a mais',
+      'Importação segura sem risco de apreensão',
     ],
     bgColor: 'bg-white',
     borderColor: 'border-sage/15',
@@ -65,10 +65,10 @@ export default function ProductVolumes() {
             Material Direto
           </span>
           <h2 id="volumes-title" className="font-heading text-4xl md:text-5xl font-extrabold text-dark tracking-tight leading-[1.1] mb-6">
-            O Tripé do Nosso <span className="text-gold italic">Método</span>.
+            3 Volumes. <span className="text-gold italic">Zero Enrolação</span>.
           </h2>
           <p className="font-body text-xl text-dark/60 max-w-2xl mx-auto font-medium">
-            Entregamos exatamente as três habilidades essenciais para não deixar lacunas na sua execução clínica.
+            Tudo o que você precisa para escolher, dosar e comprar peptídeos com segurança. Em um material só.
           </p>
         </motion.div>
 
@@ -102,9 +102,6 @@ export default function ProductVolumes() {
                   </h3>
                   <p className="font-body text-gold font-bold text-sm uppercase tracking-wider mb-6">
                     {vol.subtitle}
-                  </p>
-                  <p className="font-body text-dark/70 font-medium text-lg leading-relaxed">
-                    {vol.description}
                   </p>
                 </div>
 
