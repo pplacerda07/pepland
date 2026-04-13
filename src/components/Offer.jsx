@@ -5,7 +5,6 @@ const included = [
   { text: 'Volume 2: Guia de Doses e Reconstituição com tabelas, cálculos e passo a passo completo', highlight: true },
   { text: 'Volume 3: Lista Exclusiva de Fornecedores Verificados no cenário nacional e internacional', highlight: true },
   { text: 'Acesso imediato em PDF para ler no celular, tablet ou computador', highlight: true },
-  { text: 'Todas as atualizações futuras e novos peptídeos mapeados', highlight: true },
 ]
 
 export default function Offer() {
@@ -88,10 +87,42 @@ export default function Offer() {
                 Quero o Pacote Completo
               </a>
 
-              <div className="flex items-center justify-center gap-6 opacity-60 mix-blend-multiply mb-6">
-                <svg viewBox="0 0 32 32" className="h-5 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path d="M22.022 17.514L28.1 4.5h-4.398l-4.706 10.038l-4.71-10.038H9.897L15.98 17.51l-6.852 14.65H13.52l5.474-11.722l5.483 11.722h4.412" fill="#5E5E5E"/><path d="M5.578 4.496H1.14l8.36 17.702l-1.614 3.426l4.38.004l12.87-21.13h-4.4L13.197 18.06" fill="#000"/></g></svg>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/1200px-Mastercard_2019_logo.svg.png" alt="Mastercard" className="h-5 grayscale object-contain" />
-                <svg viewBox="0 0 38 12" className="h-4 w-auto grayscale" xmlns="http://www.w3.org/2000/svg"><path fill="#000" d="M13.623 0L9.049 11.23H4.49L7.433 0h6.19zM36.173.018l-3.328 11.212H28.19L31.517.018h4.656zm-12.75 3.125c-.015-1.092.986-1.745 2.158-2.091 1.171-.345 3.329-.396 4.675.31l.937-2.673c-1.345-.558-4.045-.843-6.195-.843-2.053 0-4.053.69-5.183 1.956-1.129 1.266-1.196 2.753-.541 3.514.801.932 2.652 1.572 2.652 1.572.766.425 2.89.846 2.89 1.846 0 1-.95 1.583-2.315 1.583-1.65-.015-3.645-.66-4.995-1.28l-1 2.82c1.35.615 3.24 1.155 5.535 1.17 2.055.015 4.095-.69 5.25-1.995 1.155-1.305 1.305-2.73 0-3.87-.645-.555-2.19-1.29-3.255-1.605 0 0-2.325-.57-2.31-1.665h-.015zM4.14 0H.465C-.105 0-.15.42.15.825l7.98 10.405H13.6L9.855 1.05C9.72.39 9.18 0 8.52 0H4.14z"/></svg>
+              {/* Ícones de pagamento reais */}
+              <div className="flex items-center justify-center gap-5 mb-6 opacity-70">
+                {/* Visa */}
+                <svg viewBox="0 0 48 32" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+                  <rect width="48" height="32" rx="4" fill="#1A1F71"/>
+                  <path d="M19.5 21h-2.7l1.7-10.5h2.7L19.5 21zm11.4-10.2c-.5-.2-1.4-.4-2.4-.4-2.7 0-4.5 1.4-4.5 3.4 0 1.5 1.4 2.3 2.4 2.8 1 .5 1.4.8 1.4 1.3 0 .7-.8 1-1.6 1-1.1 0-1.6-.2-2.5-.5l-.3-.2-.4 2.2c.6.3 1.8.5 3 .5 2.8 0 4.7-1.4 4.7-3.5 0-1.2-.7-2.1-2.3-2.8-.9-.5-1.5-.8-1.5-1.3 0-.4.5-.9 1.5-.9.9 0 1.5.2 2 .4l.2.1.3-2.1zm6.8 0h-2.1c-.6 0-1.1.2-1.4.8l-4 9.4h2.8l.6-1.6h3.5l.3 1.6H40l-2.3-10.2zm-3.4 6.8l1.4-3.9.2-.5.3 1.5.8 2.9h-2.7zM15.3 10.5L12.7 18l-.3-1.4c-.5-1.7-2-3.5-3.7-4.4l2.4 8.8h2.8l4.2-10.5h-2.8z" fill="#fff"/>
+                  <path d="M10.3 10.5H6.1l0 .2c3.4.8 5.6 2.9 6.5 5.4l-.9-4.7c-.2-.6-.7-.8-1.4-.9z" fill="#F9A51A"/>
+                </svg>
+                {/* Mastercard */}
+                <svg viewBox="0 0 48 32" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+                  <rect width="48" height="32" rx="4" fill="#252525"/>
+                  <circle cx="19" cy="16" r="8" fill="#EB001B"/>
+                  <circle cx="29" cy="16" r="8" fill="#F79E1B"/>
+                  <path d="M24 10.3a8 8 0 0 1 0 11.4 8 8 0 0 1 0-11.4z" fill="#FF5F00"/>
+                </svg>
+                {/* Pix */}
+                <svg viewBox="0 0 48 32" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Pix">
+                  <rect width="48" height="32" rx="4" fill="#F5F5F5"/>
+                  <g transform="translate(14,6) scale(0.85)">
+                    <path d="M18.1 15.3l-3.6-3.6a2.4 2.4 0 0 0-3.4 0l-3.6 3.6a2.4 2.4 0 0 0 0 3.4l3.6 3.6a2.4 2.4 0 0 0 3.4 0l3.6-3.6a2.4 2.4 0 0 0 0-3.4z" fill="#32BCAD" transform="translate(1,-5)"/>
+                    <path d="M18.1 5.3l-3.6-3.6a2.4 2.4 0 0 0-3.4 0L7.5 5.3a2.4 2.4 0 0 0 0 3.4l3.6 3.6a2.4 2.4 0 0 0 3.4 0l3.6-3.6a2.4 2.4 0 0 0 0-3.4z" fill="#32BCAD" transform="translate(1,5)"/>
+                  </g>
+                </svg>
+                {/* Boleto */}
+                <svg viewBox="0 0 48 32" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Boleto">
+                  <rect width="48" height="32" rx="4" fill="#F5F5F5"/>
+                  <rect x="10" y="8" width="2" height="16" fill="#333"/>
+                  <rect x="14" y="8" width="1" height="16" fill="#333"/>
+                  <rect x="17" y="8" width="3" height="16" fill="#333"/>
+                  <rect x="22" y="8" width="1" height="16" fill="#333"/>
+                  <rect x="25" y="8" width="2" height="16" fill="#333"/>
+                  <rect x="29" y="8" width="1" height="16" fill="#333"/>
+                  <rect x="32" y="8" width="2" height="16" fill="#333"/>
+                  <rect x="36" y="8" width="1" height="16" fill="#333"/>
+                  <rect x="38" y="8" width="2" height="16" fill="#333"/>
+                </svg>
               </div>
 
               <p className="font-body text-dark/50 text-sm font-medium">

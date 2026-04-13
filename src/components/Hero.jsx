@@ -69,7 +69,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <motion.p variants={itemVars} className="font-body text-lg md:text-xl text-dark/60 leading-relaxed mb-10 max-w-2xl font-medium">
-            Descubra como peptídeos científicos combinados como <strong className="text-dark">Retatrutida</strong> e <strong className="text-dark">CJC-1295</strong> transformam a sua composição corporal de forma totalmente segura.
+            Descubra como peptídeos científicos funcionam como sinais naturais do corpo, com atuação específica, impacto sistêmico menor e uma lógica completamente diferente dos anabolizantes.
           </motion.p>
 
           {/* Metric Badges acting as modern bullet points */}

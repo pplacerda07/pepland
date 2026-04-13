@@ -54,11 +54,11 @@ export default function App() {
         {/* 9. Oferta — preço e CTA principal */}
         <Offer />
 
-        {/* 10. Garantia — segurança de compra */}
-        <Guarantee />
-
-        {/* 11. FAQ — objeções respondidas */}
+        {/* 10. FAQ — objeções respondidas */}
         <FAQ />
+
+        {/* 11. Garantia — segurança de entrega */}
+        <Guarantee />
 
         {/* 12. CTA final — fechamento */}
         <FinalCTA />

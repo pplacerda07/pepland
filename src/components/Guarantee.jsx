@@ -14,12 +14,12 @@ export default function Guarantee() {
           {/* Guarantee badge */}
           <div className="flex-shrink-0">
             <div className="relative w-32 h-32">
-              <div className="w-32 h-32 rounded-full bg-gold-gradient flex flex-col items-center justify-center shadow-gold-lg" role="img" aria-label="Garantia de satisfação">
+              <div className="w-32 h-32 rounded-full bg-gold-gradient flex flex-col items-center justify-center shadow-gold-lg" role="img" aria-label="Garantia de entrega">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
-                <p className="font-body text-white font-bold text-sm font-medium mt-1">GARANTIA</p>
-                <p className="font-body text-white/80 text-xs font-medium">7 DIAS</p>
+                <p className="font-body text-white font-bold text-sm mt-1">ENTREGA</p>
+                <p className="font-body text-white/80 text-xs font-medium">GARANTIDA</p>
               </div>
               {/* Ring */}
               <div className="absolute inset-0 rounded-full border-2 border-gold/30 scale-110" aria-hidden="true" />
@@ -29,17 +29,17 @@ export default function Guarantee() {
           {/* Guarantee content */}
           <div>
             <h2 id="guarantee-title" className="font-heading text-2xl md:text-3xl font-extrabold text-dark mb-3">
-              Satisfação Garantida ou{' '}
-              <span className="text-gold font-bold">seu Dinheiro de Volta</span>
+              Garantia de Entrega em{' '}
+              <span className="text-gold font-bold">até 7 Dias</span>
             </h2>
             <p className="font-body text-dark/65 text-base leading-relaxed mb-4">
-              Temos tanta confiança no valor do conteúdo que oferecemos uma garantia irrestrita de 7 dias.
-              Se por qualquer motivo você não ficar satisfeito com o que recebeu, basta entrar em contato
-              e devolvemos 100% do seu investimento de imediato, sem perguntas e sem burocracia.
+              Assim que a compra for confirmada, você receberá o acesso completo ao material diretamente no seu e-mail.
+              A entrega é automática e imediata na maioria dos casos. Em situações excepcionais, garantimos que
+              o material chegará em até 7 dias úteis.
             </p>
             <p className="font-body text-dark/50 text-sm font-medium leading-relaxed">
-              Nossa prioridade é que você tenha a transformação que busca. Se o material não te entregar o
-              valor prometido, você não deve pagar por ele. É simples assim.
+              Todo o processo de pagamento é seguro e criptografado. Caso tenha qualquer dúvida
+              sobre a entrega, nossa equipe de suporte está disponível para ajudar.
             </p>
           </div>
         </div>

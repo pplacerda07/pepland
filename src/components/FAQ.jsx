@@ -12,11 +12,11 @@ const faqs = [
       },
       {
         q: 'Em quanto tempo começo a notar redução de tecido adiposo?',
-        a: 'Cada biologia é única. Peptídeos como a Retatrutida atuam no apetite em horas. O emagrecimento visível na balança ou espelho aparece geralmente logo nos primeiros 15 dias de protocolo ajustado.'
+        a: 'Cada biologia é única. Algumas rotas peptídicas atuam em apetite, sinalização metabólica e controle glicêmico. O resultado visível depende de protocolo, contexto, dieta, treino, sono e acompanhamento adequado.'
       },
       {
-        q: 'Mulheres podem usar o CJC-1295 sem engrossar a voz?',
-        a: 'Sim. Peptídeos não possuem compostos androgênicos. Não existe nenhum risco de virilização (engrossamento de voz ou pelos). É biologia limpa voltada apenas na otimização de GH e queima gorda.'
+        q: 'Mulheres podem estudar peptídeos sem medo de engrossar a voz?',
+        a: 'Sim. Peptídeos não são compostos androgênicos como os anabolizantes. A proposta é sinalização biológica específica, não excesso de hormônios masculinos. Mesmo assim, qualquer uso exige critério e orientação profissional.'
       }
     ]
   },
@@ -29,7 +29,7 @@ const faqs = [
       },
       {
         q: 'Preciso misturar tudo ou posso usar só um peptídeo?',
-        a: 'Você define a rota. Alguns preferem usar só o GHK-Cu para pele, outros focam só em BPC-157 para joelho inflamado. O método mostra as misturas (stacks) caso você queira multiplicar efeitos.'
+        a: 'Você define a rota. Algumas pessoas estudam caminhos voltados à pele, outras à recuperação articular, sono, apetite ou composição corporal. O método mostra como pensar em combinações sem tratar tudo como se fosse anabolizante.'
       },
       {
         q: 'Sou totalmente inexperiente em usar seringas. Posso fazer?',

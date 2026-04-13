@@ -8,10 +8,10 @@ const volumes = [
     subtitle: 'Navegação pela Base Biológica',
 
     topics: [
-      'Relatórios clínicos detalhados',
-      'Atuação precisa no eixo hormonal',
-      'Sinergias e misturas validadas',
-      'Protocolo base de eliminação de riscos',
+      'O que são peptídeos e como funcionam',
+      'Por que são diferentes de esteroides',
+      'Principais benefícios estudados',
+      'Cuidados essenciais antes de começar',
     ],
     bgColor: 'bg-[#F8F9FA]',
     borderColor: 'border-dark/5',
@@ -24,9 +24,9 @@ const volumes = [
 
     topics: [
       'Da água bacteriostática à seringa',
-      'Cálculo matemático de meia-idade',
-      'Protocolos cíclicos por peso corporal',
-      'Armazenamento clínico ideal',
+      'Doses base e doses usuais por objetivo',
+      'Formas de uso mais comuns na prática',
+      'Organização prática das informações',
     ],
     bgColor: 'bg-cream',
     borderColor: 'border-[#B08A43]/10',
@@ -38,9 +38,9 @@ const volumes = [
     subtitle: 'A Bússola do Mercado',
 
     topics: [
-      'Labs com testes rotineiros reais',
-      'Sinais clássicos de fraude no frasco',
-      'Preços padronizados mundialmente',
+      'Laboratórios de confiança no Brasil e exterior',
+      'Critérios de escolha e validação de fornecedores',
+      'Referências de preços e melhores condições',
       'Importação tática e segura',
     ],
     bgColor: 'bg-white',

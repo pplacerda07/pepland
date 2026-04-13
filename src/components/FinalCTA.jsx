@@ -38,7 +38,7 @@ export default function FinalCTA() {
             {[
               '3 volumes completos',
               'Lista de fornecedores exclusiva',
-              'Garantia de 7 dias',
+              'Entrega imediata por e-mail',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-sm font-body">
                 <span className="w-5 h-5 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center flex-shrink-0">

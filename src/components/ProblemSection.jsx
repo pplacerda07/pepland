@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '../lib/utils'
 
@@ -24,26 +24,40 @@ const videoPlaceholders = [
 ]
 
 function VideoCardContent({ video, index, isActive, isMuted, showPlayOverlay = true }) {
+  const videoRef = useRef(null)
+
+  // Manage video play/pause and mute state via effect to prevent audio duplication
+  useEffect(() => {
+    const el = videoRef.current
+    if (!el) return
+
+    if (isActive) {
+      el.muted = isMuted
+      el.play().catch(() => {})
+    } else {
+      el.muted = true
+      el.pause()
+      el.currentTime = 0
+    }
+
+    return () => {
+      // Cleanup: always mute and pause on unmount
+      el.muted = true
+      el.pause()
+    }
+  }, [isActive, isMuted])
+
   return (
     <div className="w-full h-full relative group bg-black">
       {video.src && (
         <video
+          ref={videoRef}
           src={video.src}
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay={isActive}
-          muted={!isActive || isMuted}
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          muted
           loop
           playsInline
-          ref={(el) => {
-            if (!el) return
-
-            if (isActive) {
-              el.play().catch(() => {})
-              return
-            }
-
-            el.pause()
-          }}
+          preload="metadata"
         />
       )}
 
@@ -99,6 +113,7 @@ export default function ProblemSection() {
   const mobileCardRefs = useRef([])
   const scrollFrameRef = useRef(null)
   const dragRef = useRef({ startX: 0, isDragging: false })
+  const autoAdvanceRef = useRef(null)
 
   const onDragStart = (e) => {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX
@@ -135,20 +150,20 @@ export default function ProblemSection() {
     })
   }
 
-  const goToVideo = (index, behavior = 'smooth') => {
+  const goToVideo = useCallback((index, behavior = 'smooth') => {
     setActiveIndex(index)
     scrollToMobileCard(index, behavior)
-  }
+  }, [])
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     const nextIndex = (activeIndex + 1) % videoPlaceholders.length
     goToVideo(nextIndex)
-  }
+  }, [activeIndex, goToVideo])
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     const prevIndex = (activeIndex - 1 + videoPlaceholders.length) % videoPlaceholders.length
     goToVideo(prevIndex)
-  }
+  }, [activeIndex, goToVideo])
 
   const handleMobileScroll = () => {
     if (scrollFrameRef.current) {
@@ -188,6 +203,37 @@ export default function ProblemSection() {
     return 'hidden'
   }
 
+  // Auto-advance carousel every 6 seconds (infinite loop)
+  useEffect(() => {
+    autoAdvanceRef.current = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % videoPlaceholders.length
+        scrollToMobileCard(next)
+        return next
+      })
+    }, 6000)
+
+    return () => {
+      if (autoAdvanceRef.current) {
+        clearInterval(autoAdvanceRef.current)
+      }
+    }
+  }, [])
+
+  // Reset auto-advance timer on manual interaction
+  const resetAutoAdvance = useCallback(() => {
+    if (autoAdvanceRef.current) {
+      clearInterval(autoAdvanceRef.current)
+    }
+    autoAdvanceRef.current = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % videoPlaceholders.length
+        scrollToMobileCard(next)
+        return next
+      })
+    }, 6000)
+  }, [])
+
   useEffect(() => {
     scrollToMobileCard(activeIndex, 'auto')
   }, [])
@@ -197,8 +243,26 @@ export default function ProblemSection() {
       if (scrollFrameRef.current) {
         cancelAnimationFrame(scrollFrameRef.current)
       }
+      if (autoAdvanceRef.current) {
+        clearInterval(autoAdvanceRef.current)
+      }
     }
   }, [])
+
+  const handleManualNext = () => {
+    handleNext()
+    resetAutoAdvance()
+  }
+
+  const handleManualPrev = () => {
+    handlePrev()
+    resetAutoAdvance()
+  }
+
+  const handleManualGoTo = (index) => {
+    goToVideo(index)
+    resetAutoAdvance()
+  }
 
   return (
     <section className="py-24 md:py-32 bg-[#F8F9FA] relative overflow-hidden" aria-labelledby="problem-title">
@@ -230,7 +294,8 @@ export default function ProblemSection() {
           <div
             ref={mobileScrollRef}
             onScroll={handleMobileScroll}
-            className="flex gap-4 overflow-x-auto px-[max(1rem,calc((100vw-300px)/2))] pb-6 snap-x snap-mandatory touch-pan-x"
+            className="flex gap-4 overflow-x-auto px-[max(1rem,calc((100vw-300px)/2))] pb-6 snap-x snap-mandatory"
+            style={{ touchAction: 'pan-x pan-y' }}
           >
             {videoPlaceholders.map((video, index) => {
               const isActive = index === activeIndex
@@ -248,13 +313,14 @@ export default function ProblemSection() {
                       return
                     }
 
-                    goToVideo(index)
+                    handleManualGoTo(index)
                   }}
                   className={cn(
                     "snap-center shrink-0 w-[300px] h-[520px] rounded-3xl overflow-hidden text-left",
                     "bg-dark border border-dark/10 shadow-2xl",
                     isActive ? "shadow-gold/20" : "shadow-dark/10 opacity-85"
                   )}
+                  style={{ touchAction: 'pan-y' }}
                 >
                   <VideoCardContent
                     video={video}
@@ -302,7 +368,7 @@ export default function ProblemSection() {
                   onClick={() => {
                     if (dragRef.current.isDragging) return
                     if (!isCenter) {
-                      goToVideo(index)
+                      handleManualGoTo(index)
                     } else {
                       setIsMuted(!isMuted)
                     }
@@ -329,7 +395,7 @@ export default function ProblemSection() {
         {/* Controls - Moved outside for better spacing */}
         <div className="flex items-center justify-center gap-6 mt-16 z-40 relative">
           <button
-            onClick={handlePrev}
+            onClick={handleManualPrev}
             className="w-14 h-14 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark/10 transition-all hover:scale-105 active:scale-95"
             aria-label="Vídeo anterior"
           >
@@ -341,7 +407,7 @@ export default function ProblemSection() {
               <button
                 key={i}
                 type="button"
-                onClick={() => goToVideo(i)}
+                onClick={() => handleManualGoTo(i)}
                 aria-label={`Ir para video ${i + 1}`}
                 className={cn(
                   "w-2.5 h-2.5 rounded-full transition-all duration-300",
@@ -352,7 +418,7 @@ export default function ProblemSection() {
           </div>
 
           <button
-            onClick={handleNext}
+            onClick={handleManualNext}
             className="w-14 h-14 rounded-full border border-dark/20 flex items-center justify-center text-dark hover:bg-dark/10 transition-all hover:scale-105 active:scale-95"
             aria-label="Próximo vídeo"
           >

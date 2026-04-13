@@ -15,14 +15,11 @@ export default function SupplierSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block bg-dark/5 border border-dark/10 text-dark font-body font-bold text-sm tracking-widest uppercase px-5 py-2 rounded-full mb-8">
-              O Grande Gargalo
-            </span>
             <h2 id="suppliers-title" className="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-dark tracking-tight leading-[1.05] mb-8">
               Não Seja Feito de <span className="text-gold italic">Cobaia</span>.
             </h2>
             <p className="font-body text-2xl text-dark/60 max-w-xl font-medium mb-12 leading-relaxed">
-              Saber qual peptídeo usar é metade do caminho. O mercado livre é armadilha pura. Sem uma fonte testada, seu conhecimento não serve para nada.
+              Sem saber qual peptídeo usar, você só perde tempo e dinheiro. Informação da internet sem critério é armadilha pura. Sem uma fonte testada, seu conhecimento não serve para nada.
             </p>
 
             <a
@@ -36,7 +33,7 @@ export default function SupplierSection() {
             </a>
           </motion.div>
 
-          {/* Right: image card */}
+          {/* Right: molecule image */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,13 +41,10 @@ export default function SupplierSection() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="flex flex-col items-center gap-1"
           >
-            <span className="font-heading font-bold text-dark/50 text-xl tracking-widest uppercase">
-              pronto(a) para mudar?
-            </span>
             <div className="w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-2xl shadow-dark/10 border border-dark/5">
               <img
-                src="/girl_looking_at_the_camera.png"
-                alt="Transformação com peptídeos"
+                src="/imagem_molecula.jpg"
+                alt="Estrutura molecular de peptídeos"
                 className="w-full h-full object-cover"
               />
             </div>

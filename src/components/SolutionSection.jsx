@@ -50,10 +50,10 @@ export default function SolutionSection() {
 
             <div className="space-y-6">
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
-                Diferente de suplementos genéricos, os peptídeos atuam como <strong className="text-dark">sinais vitais</strong>. Eles dizem literalmente ao seu corpo para queimar gordura ou reparar as articulações.
+                Diferente de suplementos genéricos, os peptídeos atuam como <strong className="text-dark">sinais vitais</strong>. Eles dizem literalmente ao seu corpo para <strong className="text-dark">queimar gordura</strong>, <strong className="text-dark">aumentar GH</strong> e <strong className="text-dark">construir massa magra</strong>.
               </p>
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
-                Eles funcionam como uma comunicação direta com o seu organismo de forma completamente natural e segura. O resultado não é promessa vazia. É ciência aplicada na prática.
+                Enquanto esteroides forçam doses massivas de hormônios sintéticos e suprimem a produção natural de testosterona, os peptídeos trabalham <strong className="text-dark">com</strong> o seu corpo — sem desligar o eixo hormonal, sem sobrecarga nos órgãos e sem os colaterais agressivos dos anabolizantes. O resultado é ciência aplicada na prática.
               </p>
             </div>
 
