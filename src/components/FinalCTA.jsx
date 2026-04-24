@@ -28,14 +28,14 @@ export default function FinalCTA() {
           </h2>
 
           <p className="font-body text-dark/65 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-            Tudo o que você precisa para usar peptídeos com segurança: doses, fornecedores e protocolos, em um só lugar, em português, pronto para aplicar hoje.
+            Doses recomendadas, protocolos completos e o fornecedor exclusivo revelado para o Brasil. Tudo em português, pronto para aplicar hoje. Não seja feito de cobaia.
           </p>
 
           {/* Value summary */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             {[
               '3 volumes completos',
-              'Lista de fornecedores exclusiva',
+              '🔒 Fornecedor exclusivo revelado',
               'Entrega imediata por e-mail',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-sm font-body">

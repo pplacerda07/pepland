@@ -1,9 +1,9 @@
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 const included = [
-  { text: 'Volume 1: O que cada peptídeo faz, como funciona e por que é diferente de esteroide', highlight: true },
-  { text: 'Volume 2: Doses exatas, reconstituição passo a passo e tabelas prontas por objetivo', highlight: true },
-  { text: 'Volume 3: Lista verificada de fornecedores nacionais e internacionais', highlight: true },
+  { text: 'Volume 1: O que cada peptídeo faz, como funciona e adequação para cada caso + explicação de uso e reconstituição', highlight: true },
+  { text: 'Volume 2: Doses recomendadas por peptídeo e objetivo, reconstituição passo a passo e guia de aplicação subcutânea', highlight: true },
+  { text: 'Volume 3: Fornecedor exclusivo revelado para o Brasil + importação segura sem risco de apreensão', highlight: true },
   { text: 'Acesso imediato em PDF. Leia no celular, tablet ou computador', highlight: true },
 ]
 

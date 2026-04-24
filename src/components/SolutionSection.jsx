@@ -50,7 +50,7 @@ export default function SolutionSection() {
 
             <div className="space-y-6">
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
-                Suplementos comuns não dizem ao corpo o que fazer. Peptídeos sim. Eles ativam diretamente os processos de <strong className="text-dark">queima de gordura</strong>, <strong className="text-dark">produção de GH</strong> e <strong className="text-dark">ganho de massa magra</strong>. Sem precisar forçar hormônio de fora.
+                Suplementos comuns não dizem ao corpo o que fazer. Peptídeos sim. Eles ativam diretamente os processos de <strong className="text-dark">queima de gordura</strong>, <strong className="text-dark">construção de colágeno e melhora da pele</strong>, <strong className="text-dark">aumento de GH e massa magra</strong> e <strong className="text-dark">melhora do sono</strong>. Sem precisar forçar hormônio de fora.
               </p>
               <p className="font-body text-xl font-medium text-dark/70 leading-relaxed md:leading-[1.6]">
                 Esteroides suprimem seu eixo hormonal, sobrecarregam fígado e rins e causam colaterais sérios. Peptídeos entregam resultados potentes: <strong className="text-dark">sem destruir sua produção hormonal natural, sem sobrecarga nos órgãos e sem efeitos colaterais agressivos</strong>. O resultado no espelho, sem o preço no corpo.

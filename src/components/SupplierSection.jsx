@@ -18,8 +18,11 @@ export default function SupplierSection() {
             <h2 id="suppliers-title" className="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-dark tracking-tight leading-[1.05] mb-8">
               Não Seja Feito de <span className="text-gold italic">Cobaia</span>.
             </h2>
-            <p className="font-body text-2xl text-dark/60 max-w-xl font-medium mb-12 leading-relaxed">
-              Sem saber qual peptídeo usar, você só perde tempo e dinheiro. Informação da internet sem critério é armadilha pura. Sem uma fonte testada, seu conhecimento não serve para nada.
+            <p className="font-body text-2xl text-dark/60 max-w-xl font-medium mb-8 leading-relaxed">
+              Sem um fornecedor de confiança, todo conhecimento sobre peptídeos não serve para nada. Produto falsificado, sub-dosado ou contaminado é o que mais existe por aí.
+            </p>
+            <p className="font-body text-lg text-gold font-bold mb-12 max-w-xl">
+              🔒 No Volume 3, revelamos o fornecedor exclusivo testado e validado para o Brasil — com importação segura e sem risco de apreensão.
             </p>
 
             <a

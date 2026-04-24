@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '5+', label: 'Peptídeos Detalhados' },
+  { value: '5', label: 'Mais Indicados no Ebook' },
   { value: '100%', label: 'Base Científica' },
   { value: '3', label: 'Volumes Completos' },
-  { value: '24/7', label: 'Acesso Vitalício' },
+  { value: '🔒', label: 'Fornecedores Exclusivos' },
 ]
 
 const containerVariants = {

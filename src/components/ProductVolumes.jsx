@@ -5,12 +5,12 @@ const volumes = [
   {
     number: '01',
     title: 'O Guia Definitivo',
-    subtitle: 'Entenda Peptídeos de Verdade',
+    subtitle: 'Entenda Cada Peptídeo a Fundo',
 
     topics: [
-      'O que cada peptídeo faz no corpo, sem rodeio',
+      'O que cada peptídeo faz, como funciona e adequação para cada caso',
       'A diferença real entre peptídeo e esteroide',
-      'Como escolher o peptídeo certo pro seu objetivo',
+      'Explicação completa de uso e reconstituição',
       'O que observar antes de começar qualquer protocolo',
     ],
     bgColor: 'bg-[#F8F9FA]',
@@ -23,9 +23,9 @@ const volumes = [
     subtitle: 'Aplique com Segurança Total',
 
     topics: [
-      'Dose exata por peptídeo e por objetivo',
+      'Doses recomendadas por peptídeo e por objetivo',
       'Passo a passo visual da reconstituição',
-      'Como aplicar com caneta subcutânea (igual diabético)',
+      'Guia e dicas de aplicação subcutânea',
       'Tabelas prontas de dose por peso corporal',
     ],
     bgColor: 'bg-cream',
@@ -35,13 +35,13 @@ const volumes = [
   {
     number: '03',
     title: 'Lista de Fornecedores',
-    subtitle: 'Compre Sem Cair em Furada',
+    subtitle: 'Não Seja Feito de Cobaia',
 
     topics: [
-      'Laboratórios de confiança no Brasil e exterior',
+      'Fornecedor exclusivo revelado para o Brasil',
       'Como validar se o fornecedor é legítimo',
-      'Referência de preços para não pagar a mais',
       'Importação segura sem risco de apreensão',
+      'Laboratórios de confiança no Brasil e exterior',
     ],
     bgColor: 'bg-white',
     borderColor: 'border-sage/15',

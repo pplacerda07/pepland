@@ -69,15 +69,15 @@ export default function Hero() {
 
           {/* Subheadline */}
           <motion.p variants={itemVars} className="font-body text-lg md:text-xl text-dark/60 leading-relaxed mb-10 max-w-2xl font-medium">
-            Queime gordura, aumente GH e ganhe massa magra. Sem destruir seu eixo hormonal e sem os colaterais dos anabolizantes.
+            Queime gordura, construa colágeno e melhore a pele, aumente GH e massa magra, e melhore o sono. Sem destruir seu eixo hormonal e sem os colaterais dos anabolizantes.
           </motion.p>
 
           {/* Metric Badges acting as modern bullet points */}
           <motion.div variants={itemVars} className="flex flex-wrap justify-center gap-3 mb-12">
             {[
               { text: "Comprovado Cientificamente", icon: "🧬" },
-              { text: "Doses Exatas", icon: "⚖️" },
-              { text: "Fornecedores Nacionais", icon: "🇧🇷" }
+              { text: "Doses Recomendadas", icon: "⚖️" },
+              { text: "Fornecedor Exclusivo Revelado", icon: "🔒" }
             ].map((badge, i) => (
               <div key={i} className="flex items-center gap-2 bg-white/50 border border-dark/5 backdrop-blur-sm px-4 py-2 rounded-2xl text-sm font-body font-bold text-dark/70 shadow-sm">
                 <span>{badge.icon}</span>

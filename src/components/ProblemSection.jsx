@@ -113,7 +113,6 @@ export default function ProblemSection() {
   const mobileCardRefs = useRef([])
   const scrollFrameRef = useRef(null)
   const dragRef = useRef({ startX: 0, isDragging: false })
-  const autoAdvanceRef = useRef(null)
 
   const onDragStart = (e) => {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX
@@ -203,36 +202,9 @@ export default function ProblemSection() {
     return 'hidden'
   }
 
-  // Auto-advance carousel every 6 seconds (infinite loop)
-  useEffect(() => {
-    autoAdvanceRef.current = setInterval(() => {
-      setActiveIndex((prev) => {
-        const next = (prev + 1) % videoPlaceholders.length
-        scrollToMobileCard(next)
-        return next
-      })
-    }, 6000)
+  // Auto-advance removed — users watch at their own pace
 
-    return () => {
-      if (autoAdvanceRef.current) {
-        clearInterval(autoAdvanceRef.current)
-      }
-    }
-  }, [])
 
-  // Reset auto-advance timer on manual interaction
-  const resetAutoAdvance = useCallback(() => {
-    if (autoAdvanceRef.current) {
-      clearInterval(autoAdvanceRef.current)
-    }
-    autoAdvanceRef.current = setInterval(() => {
-      setActiveIndex((prev) => {
-        const next = (prev + 1) % videoPlaceholders.length
-        scrollToMobileCard(next)
-        return next
-      })
-    }, 6000)
-  }, [])
 
   useEffect(() => {
     scrollToMobileCard(activeIndex, 'auto')
@@ -243,25 +215,19 @@ export default function ProblemSection() {
       if (scrollFrameRef.current) {
         cancelAnimationFrame(scrollFrameRef.current)
       }
-      if (autoAdvanceRef.current) {
-        clearInterval(autoAdvanceRef.current)
-      }
     }
   }, [])
 
   const handleManualNext = () => {
     handleNext()
-    resetAutoAdvance()
   }
 
   const handleManualPrev = () => {
     handlePrev()
-    resetAutoAdvance()
   }
 
   const handleManualGoTo = (index) => {
     goToVideo(index)
-    resetAutoAdvance()
   }
 
   return (
