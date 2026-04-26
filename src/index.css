@@ -7,6 +7,26 @@
     scroll-behavior: smooth;
   }
 
+  /* Mobile: scroll-snap fluido para navegar entre seções */
+  @media (max-width: 767px) {
+    html {
+      scroll-snap-type: y proximity;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Cada seção vira um ponto de snap */
+    main > section,
+    footer {
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+    }
+
+    /* Padding no topo para não cobrir com a navbar */
+    html {
+      scroll-padding-top: 64px;
+    }
+  }
+
   body {
     font-family: 'Montserrat', system-ui, sans-serif;
     background-color: #F8F9FA;

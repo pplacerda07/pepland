@@ -26,22 +26,33 @@ const videoPlaceholders = [
 function VideoCardContent({ video, index, isActive, isMuted, showPlayOverlay = true }) {
   const videoRef = useRef(null)
 
-  // Manage video play/pause and mute state via effect to prevent audio duplication
+  // Play/pause and mute logic driven by visibility + active state
   useEffect(() => {
     const el = videoRef.current
     if (!el) return
 
     if (isActive) {
-      el.muted = isMuted
-      el.play().catch(() => {})
+      // Start muted to avoid overlap, then set final mute state after play
+      el.muted = true
+      const playPromise = el.play()
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // Only unmute after play succeeds to prevent audio flash
+          el.muted = isMuted
+        }).catch(() => {
+          // Autoplay blocked — keep muted and playing
+          el.muted = true
+          el.play().catch(() => {})
+        })
+      }
     } else {
+      // Kill audio and stop immediately for non-active videos
       el.muted = true
       el.pause()
       el.currentTime = 0
     }
 
     return () => {
-      // Cleanup: always mute and pause on unmount
       el.muted = true
       el.pause()
     }
@@ -108,11 +119,60 @@ function VideoCardContent({ video, index, isActive, isMuted, showPlayOverlay = t
 
 export default function ProblemSection() {
   const [activeIndex, setActiveIndex] = useState(1)
-  const [isMuted, setIsMuted] = useState(true)
+  const [isMuted, setIsMuted] = useState(true)       // manual toggle by user
+  const [sectionVisible, setSectionVisible] = useState(false)
+  const sectionRef = useRef(null)
   const mobileScrollRef = useRef(null)
   const mobileCardRefs = useRef([])
   const scrollFrameRef = useRef(null)
   const dragRef = useRef({ startX: 0, isDragging: false })
+  const hasInteracted = useRef(false) // track user interaction for autoplay policy
+
+  // Observe section visibility — controls play/pause and mute
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setSectionVisible(entry.isIntersecting)
+        if (!entry.isIntersecting) {
+          // Section scrolled out of view → mute
+          setIsMuted(true)
+        } else if (hasInteracted.current) {
+          // Section came into view and user has interacted → unmute
+          setIsMuted(false)
+        }
+      },
+      { threshold: 0.3 } // 30% visible triggers
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  // Track first user interaction on the page (needed for autoplay with sound)
+  useEffect(() => {
+    const markInteracted = () => {
+      hasInteracted.current = true
+      // If section is already visible when user first interacts, unmute
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect()
+        const visible = rect.top < window.innerHeight && rect.bottom > 0
+        if (visible) {
+          setIsMuted(false)
+        }
+      }
+    }
+    window.addEventListener('touchstart', markInteracted, { once: true })
+    window.addEventListener('click', markInteracted, { once: true })
+    window.addEventListener('scroll', markInteracted, { once: true })
+    return () => {
+      window.removeEventListener('touchstart', markInteracted)
+      window.removeEventListener('click', markInteracted)
+      window.removeEventListener('scroll', markInteracted)
+    }
+  }, [])
 
   const onDragStart = (e) => {
     const clientX = e.touches ? e.touches[0].clientX : e.clientX
@@ -152,6 +212,7 @@ export default function ProblemSection() {
   const goToVideo = useCallback((index, behavior = 'smooth') => {
     setActiveIndex(index)
     scrollToMobileCard(index, behavior)
+    // Keep current mute state — visibility handles auto-unmute
   }, [])
 
   const handleNext = useCallback(() => {
@@ -202,10 +263,6 @@ export default function ProblemSection() {
     return 'hidden'
   }
 
-  // Auto-advance removed — users watch at their own pace
-
-
-
   useEffect(() => {
     scrollToMobileCard(activeIndex, 'auto')
   }, [])
@@ -231,7 +288,7 @@ export default function ProblemSection() {
   }
 
   return (
-    <section className="py-24 md:py-32 bg-[#F8F9FA] relative overflow-hidden" aria-labelledby="problem-title">
+    <section ref={sectionRef} className="py-24 md:py-32 bg-[#F8F9FA] relative overflow-hidden" aria-labelledby="problem-title">
       <div className="absolute inset-0 bg-noise opacity-[0.03]" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
@@ -264,7 +321,7 @@ export default function ProblemSection() {
             style={{ touchAction: 'pan-x pan-y' }}
           >
             {videoPlaceholders.map((video, index) => {
-              const isActive = index === activeIndex
+              const isActive = index === activeIndex && sectionVisible
 
               return (
                 <button
@@ -275,7 +332,7 @@ export default function ProblemSection() {
                   type="button"
                   onClick={() => {
                     if (isActive) {
-                      setIsMuted(!isMuted)
+                      setIsMuted(prev => !prev)
                       return
                     }
 
@@ -336,7 +393,7 @@ export default function ProblemSection() {
                     if (!isCenter) {
                       handleManualGoTo(index)
                     } else {
-                      setIsMuted(!isMuted)
+                      setIsMuted(prev => !prev)
                     }
                   }}
                   className={cn(
@@ -348,7 +405,7 @@ export default function ProblemSection() {
                   <VideoCardContent
                     video={video}
                     index={index}
-                    isActive={isCenter}
+                    isActive={isCenter && sectionVisible}
                     isMuted={isMuted}
                   />
                 </motion.div>
