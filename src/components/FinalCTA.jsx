@@ -58,7 +58,7 @@ export default function FinalCTA() {
           </a>
 
           <p className="font-body text-dark/35 text-sm font-medium">
-            Por apenas <strong className="text-gold font-bold">R$ 47,90</strong> · Pagamento único · Acesso vitalício
+            Por apenas <strong className="text-gold font-bold">R$ 27,90</strong> · Pagamento único · Acesso vitalício
           </p>
         </div>
       </div>
