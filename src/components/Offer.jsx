@@ -72,10 +72,10 @@ export default function Offer() {
 
             {/* Bottom: price + CTA */}
             <div className="border-t border-dark/5 pt-12 flex flex-col items-center text-center">
-              <p className="font-heading text-dark/40 font-bold text-lg line-through decoration-dark/20 mb-2">De R$ 47,00</p>
+              <p className="font-heading text-dark/40 font-bold text-lg line-through decoration-dark/20 mb-2">De R$ 97,00</p>
               <div className="flex items-baseline justify-center gap-2 text-dark mb-2">
                 <span className="font-heading font-bold text-xl md:text-2xl">Por</span>
-                <span className="font-heading font-black text-6xl md:text-7xl tracking-tighter">R$ 14,90</span>
+                <span className="font-heading font-black text-6xl md:text-7xl tracking-tighter">R$ 47,90</span>
               </div>
               <p className="font-heading font-bold text-dark/60 text-lg mb-1">pagamento único</p>
               <p className="font-body text-dark/40 text-sm font-medium mb-8">Acesso vitalício ao material completo</p>
